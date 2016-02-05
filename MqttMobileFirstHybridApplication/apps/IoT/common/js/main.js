@@ -1,4 +1,3 @@
 function wlCommonInit(){
-	MQTTconnect();
-	
+	 MQTTconnect();	//connect broker with subscribe 
 }

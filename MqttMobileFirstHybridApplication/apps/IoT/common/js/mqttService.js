@@ -1,6 +1,5 @@
-// host = '172.16.153.122';	// hostname or IP address
-var host = '194.165.40.166';	// hostname or IP address
-var port = 8080;
+var host = 'broker.mqttdashboard.com';
+var port = 8000;
 var topic = 'Sensor';		// topic to subscribe to
 var useTLS = false;
 var username = null;

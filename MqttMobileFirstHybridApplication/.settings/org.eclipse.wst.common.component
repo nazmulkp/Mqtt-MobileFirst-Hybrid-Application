@@ -2,6 +2,8 @@
     <wb-module deploy-name="MqttMobileFirstHybridApplication">
         <wb-resource deploy-path="/" source-path="/apps/IoT/common"/>
         <wb-resource deploy-path="/" source-path="/apps/IoT/android"/>
+        <wb-resource deploy-path="/" source-path="/apps/IoT/windowsphone8"/>
+        <wb-resource deploy-path="/" source-path="/apps/IoT/iphone"/>
         <property name="context-root" value="MqttMobileFirstHybridApplication"/>
     </wb-module>
 </project-modules>

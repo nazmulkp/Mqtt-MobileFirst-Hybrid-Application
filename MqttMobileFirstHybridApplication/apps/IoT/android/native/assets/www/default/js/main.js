@@ -1,8 +1,7 @@
 
 /* JavaScript content from js/main.js in folder common */
 function wlCommonInit(){
-	MQTTconnect();
-	
+	 MQTTconnect();	//connect broker with subscribe 
 }
 
 /* JavaScript content from js/main.js in folder android */

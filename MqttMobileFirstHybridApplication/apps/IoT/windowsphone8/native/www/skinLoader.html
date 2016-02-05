@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+        <style>
+        	html, body{
+        		margin: 0;
+        		width: 100%;
+        		overflow:hidden;
+        	}        	
+        </style>
+      <script src="default/worklight/cordova.js"></script>
+
+      <script> 
+	     var mainFile = "index.html";
+	     var skinName = "default";
+	      
+	     var pattern = /((\bhttps?:\/\/)|(\bwww\.))\S*/; //This is required in case mainfile is hosted remotely	 
+
+	     function loadSkinCallback (exists) {
+	         if (exists) {
+	         	 if (pattern.test(mainFile)) {
+			 		document.location.replace(mainFile);
+		 		 }else {
+		 		 	document.location.replace(skinName + "/" + mainFile);
+		 		 }              
+	      	 } else {
+	      		debug.error("Cannot find skin " + skinName);
+	      	 }
+	     }
+
+
+	     function loadSkin() {
+	      	if (typeof window.getSkinName == "function") {
+	      		skinName = getSkinName();
+	        }
+	        loadSkinCallback(true);
+	    }
+	    document.addEventListener('deviceready', loadSkin, false);
+      </script>
+    </head>
+	<body onload="document.getElementById('content').style.height = screen.height + 'px';" id="content">
+  </body>
+</html>
