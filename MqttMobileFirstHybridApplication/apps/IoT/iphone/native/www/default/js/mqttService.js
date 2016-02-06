@@ -6,8 +6,8 @@ var topic = 'Sensor';		// topic to subscribe to
 var useTLS = false;
 var username = null;
 var password = null;
-// username = "jjolie";
-// password = "aa";
+// username = "Nazmul";
+// password = "Kp0582!";
 var cleansession = true;   
 
 var mqtt;
@@ -64,3 +64,7 @@ var mqtt;
         console.log( topic + ' = ' + payload)
         alert(topic + ' = ' + payload);
     };
+    function onMessagePublish(){
+    	 mqtt.send(topic,"i test for publish", 0);
+    	
+    }
